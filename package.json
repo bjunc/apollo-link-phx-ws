@@ -2,7 +2,7 @@
   "name": "apollo-link-phx-ws",
   "version": "0.1.0",
   "description": "Phoenix WebSocket link for Apollo 2.0",
-  "main": "apollo-link-phx-ws.js",
+  "module": "src/apollo-link-phx-ws.js",
   "repository": "git@github.com:bjunc/apollo-link-phx-ws.git",
   "author": "Robert Juncosa <bobbyjuncosa@gmail.com>",
   "license": "MIT",
