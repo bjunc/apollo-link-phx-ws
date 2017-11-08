@@ -8,7 +8,8 @@
   "author": "Robert Juncosa <bobbyjuncosa@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "babel src --presets babel-preset-es2015 --out-dir dist"
+    "build": "babel src --presets babel-preset-es2015 --out-dir dist",
+    "prepublish": "npm run build"
   },
   "dependencies": {
     "apollo-link-core": "^0.5.4",
