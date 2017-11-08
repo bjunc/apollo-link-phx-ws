@@ -5,5 +5,11 @@
   "main": "apollo-link-phx-ws.js",
   "repository": "git@github.com:bjunc/apollo-link-phx-ws.git",
   "author": "Robert Juncosa <bobbyjuncosa@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "apollo-link-core": "^0.5.4",
+    "graphql": "^0.11.7",
+    "phoenix": "^1.3.0",
+    "websocket": "^1.0.25"
+  }
 }
