@@ -3,7 +3,7 @@ import { Observable } from 'apollo-link-core'
 import { Socket as PhoenixSocket } from 'phoenix'
 import { w3cwebsocket as W3CWebSocket } from 'websocket'
 
-export class PhxWebSocketLink {
+export class PhoenixWebSocketLink {
   constructor (opts) {
     if (typeof window === 'undefined' && !opts.transport) opts.transport = W3CWebSocket
     let socket = new PhoenixSocket(opts.uri, opts)

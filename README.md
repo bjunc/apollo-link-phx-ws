@@ -19,7 +19,7 @@ Phoenix websocket link for Apollo 2.0
 
 ```javascript
 import { ApolloClient } from 'apollo-client'
-import { PhxWebSocketLink } from 'apollo-link-phx-ws'
+import { PhoenixWebSocketLink } from 'apollo-link-phx-ws'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 
 // socket options
@@ -29,7 +29,7 @@ let options = {
 }
 
 // socket link
-const link = new PhxWebSocketLink(options)
+const link = new PhoenixWebSocketLink(options)
 
 // apollo client
 const client = new ApolloClient({
