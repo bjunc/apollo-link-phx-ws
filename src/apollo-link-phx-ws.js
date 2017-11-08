@@ -39,13 +39,11 @@ export class PhxWebSocketLink {
   }
 
   _joinChannel (socket) {
-    console.log('Joining channel')
 		const CHANNEL_TOPIC = '__absinthe__:control'
 		let channel = socket.channel(CHANNEL_TOPIC, {})
 		this._channel = channel
     channel.join()
-      .receive('ok', response => console.log(`Joined successfully ${CHANNEL_TOPIC}`, response))
-      .receive('error', response => { console.log(`Unable to join ${CHANNEL_TOPIC}`, response) })
-		// TODO: wrap channel join in promise for error catching/reporting
+      // .receive('ok', response => console.log(`Joined successfully ${CHANNEL_TOPIC}`, response))
+      // .receive('error', response => { console.log(`Unable to join ${CHANNEL_TOPIC}`, response) })
   }
 }
