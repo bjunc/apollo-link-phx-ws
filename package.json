@@ -1,6 +1,6 @@
 {
   "name": "apollo-link-phx-ws",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Phoenix WebSocket link for Apollo 2.0",
   "main": "dist/PhoenixWebSocketLink.js",
   "repository": "git@github.com:bjunc/apollo-link-phx-ws.git",
