@@ -12,6 +12,9 @@ export class PhoenixWebSocketLink {
    */
   constructor (opts) {
     let socket = new PhoenixSocket(opts.uri, opts)
+    if (typeof window === 'undefined' && !opts.transport) {
+      console.warn('Potentially running in Node, which will cause errors (window undefined).  Consider setting w3cwebsocket as transport option.')
+    }
     opts.uri = opts.uri || '/graphql'
 
     try {
