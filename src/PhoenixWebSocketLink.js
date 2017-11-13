@@ -11,15 +11,15 @@ export class PhoenixWebSocketLink {
    * @param {W3CWebSocket=} opts.transport - useful for SSR (default PhoenixSocket transport calls window)
    */
   constructor (opts) {
-    let socket = new PhoenixSocket(opts.uri, opts)
     if (typeof window === 'undefined' && !opts.transport) {
       console.warn('Potentially running in Node, which will cause errors (window undefined).  Consider setting w3cwebsocket as transport option.')
     }
     opts.uri = opts.uri || '/graphql'
+    this._socket = opts.socket || new PhoenixSocket(opts.uri, opts)
 
     try {
-      socket.connect()
-      this._joinChannel(socket)
+      this._socket.connect()
+      this._joinChannel(this._socket)
     } catch (err) {
       console.error(err)
     }
