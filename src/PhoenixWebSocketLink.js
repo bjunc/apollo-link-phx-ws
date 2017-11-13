@@ -40,21 +40,21 @@ export class PhoenixWebSocketLink {
    */
   request ({ operationName, query, variables }) {
     query = print(query)
-		return new Observable(observer => {
-			this._channel
-				.push('doc', { operationName, query, variables })
-				.receive('ok', response => {
+    return new Observable(observer => {
+      this._channel
+        .push('doc', { operationName, query, variables })
+        .receive('ok', response => {
           // console.log('operation response', response)
           observer.next(response)
           observer.complete()
         })
-				.receive('ignore', response => {
+        .receive('ignore', response => {
           observer.next(response)
           observer.complete()
         })
-				.receive('error', observer.error.bind(observer))
-				.receive('timeout', observer.error.bind(observer))
-		})
+        .receive('error', observer.error.bind(observer))
+        .receive('timeout', observer.error.bind(observer))
+    })
   }
 
   /**
@@ -62,9 +62,9 @@ export class PhoenixWebSocketLink {
    */
 
   _joinChannel (socket) {
-		const CHANNEL_TOPIC = '__absinthe__:control'
-		let channel = socket.channel(CHANNEL_TOPIC, {})
-		this._channel = channel
+    const CHANNEL_TOPIC = '__absinthe__:control'
+    let channel = socket.channel(CHANNEL_TOPIC, {})
+    this._channel = channel
     channel.join()
       // .receive('ok', response => console.log(`Joined successfully ${CHANNEL_TOPIC}`, response))
       // .receive('error', response => { console.log(`Unable to join ${CHANNEL_TOPIC}`, response) })
