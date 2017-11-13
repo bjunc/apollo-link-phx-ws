@@ -40,7 +40,6 @@ export class PhoenixWebSocketLink {
    */
   request ({ operationName, query, variables }) {
     query = print(query)
-		// console.log('Phoenix apollo: operationName:', operationName)
 		return new Observable(observer => {
 			this._channel
 				.push('doc', { operationName, query, variables })
