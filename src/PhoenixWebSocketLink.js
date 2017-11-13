@@ -5,7 +5,7 @@ import { Socket as PhoenixSocket } from 'phoenix'
 export class PhoenixWebSocketLink {
   /**
    * @param {Object} opts 
-   * @param {string=/graphql} opts.uri - the URI key can be either a string endpoint or default to “/graphql”
+   * @param {string=/socket} opts.uri - the URI key can be either a string endpoint or default to “/socket
    * @param {Object=} opts.params - useful for passing an auth token, which could be parsed via Guardian in socket connect function
    * @param {PhoenixSocket=PhoenixSocket} opts.socket - a pre-instantiated socket.  defaults to a new PhoenixSocket
    * @param {W3CWebSocket=} opts.transport - useful for SSR (default PhoenixSocket transport calls window)
@@ -14,7 +14,7 @@ export class PhoenixWebSocketLink {
     if (typeof window === 'undefined' && !opts.transport) {
       console.warn('Potentially running in Node, which will cause errors (window undefined).  Consider setting w3cwebsocket as transport option.')
     }
-    opts.uri = opts.uri || '/graphql'
+    opts.uri = opts.uri || '/socket'
     this._socket = opts.socket || new PhoenixSocket(opts.uri, opts)
 
     try {
