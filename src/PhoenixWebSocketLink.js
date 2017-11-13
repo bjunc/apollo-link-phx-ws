@@ -14,6 +14,7 @@ export class PhoenixWebSocketLink {
   constructor (opts) {
     if (typeof window === 'undefined' && !opts.transport) opts.transport = W3CWebSocket
     let socket = new PhoenixSocket(opts.uri, opts)
+    opts.uri = opts.uri || '/graphql'
 
     try {
       socket.connect()
