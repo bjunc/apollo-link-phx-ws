@@ -1,6 +1,6 @@
 {
   "name": "apollo-link-phx-ws",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Phoenix WebSocket link for Apollo 2.0",
   "main": "dist/PhoenixWebSocketLink.js",
   "repository": "git@github.com:bjunc/apollo-link-phx-ws.git",
@@ -13,7 +13,7 @@
   "dependencies": {
     "apollo-link-core": "^0.5.4",
     "graphql": "^0.11.7",
-    "phoenix": "^1.3.0",
+    "phoenix": "^1.3.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
