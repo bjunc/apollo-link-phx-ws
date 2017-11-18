@@ -15,6 +15,17 @@ Phoenix websocket link for Apollo 2.0
 {:absinthe_phoenix, github: "absinthe-graphql/absinthe_phoenix"},
 ```
 
+**2017-11-18 Update: The Absinthe suite was updated on Nov 13th. My current deps are:**
+
+```elixir
+{:absinthe, "~> 1.4.0"},
+{:absinthe_plug, "~> 1.4.0"},
+{:absinthe_ecto, "~> 0.1.3"},
+{:absinthe_phoenix, "~> 1.4.0"}
+
+```
+
+
 ### Example
 
 ```javascript
