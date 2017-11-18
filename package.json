@@ -1,6 +1,6 @@
 {
   "name": "apollo-link-phx-ws",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "Phoenix WebSocket link for Apollo 2.0",
   "main": "dist/PhoenixWebSocketLink.js",
   "module": "dist/PhoenixWebSocketLink.js",
