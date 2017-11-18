@@ -2,7 +2,7 @@ import { print } from 'graphql/language/printer'
 import { Observable } from 'apollo-link-core'
 import { Socket as PhoenixSocket } from 'phoenix'
 
-export class PhoenixWebSocketLink {
+export default class PhoenixWebSocketLink {
   /**
    * @param {Object} opts 
    * @param {string=/socket} opts.uri - the URI key can be either a string endpoint or default to “/socket
