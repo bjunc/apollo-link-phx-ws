@@ -1,0 +1,7 @@
+{
+  "plugins": ["transform-runtime"],
+  "presets": [
+    ["env", {"modules": false, "spec": true, "useBuiltIns": true}],
+    "stage-0"
+  ]
+}
