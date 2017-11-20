@@ -1,23 +1,29 @@
 {
   "name": "apollo-link-phx-ws",
-  "version": "0.2.2",
+  "version": "0.3.4",
   "description": "Phoenix WebSocket link for Apollo 2.0",
   "main": "dist/PhoenixWebSocketLink.js",
+  "module": "dist/PhoenixWebSocketLink.js",
   "repository": "git@github.com:bjunc/apollo-link-phx-ws.git",
   "author": "Robert Juncosa <bobbyjuncosa@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "babel src --presets babel-preset-es2015 --out-dir dist",
+    "build": "rollup -c",
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "apollo-link-core": "^0.5.4",
     "graphql": "^0.11.7",
-    "phoenix": "^1.3.0",
-    "websocket": "^1.0.25"
+    "phoenix": "^1.3.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-es2015": "^6.24.1"
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "rollup-plugin-babel": "^3.0.2",
+    "rollup-plugin-commonjs": "^8.2.6",
+    "rollup-plugin-node-resolve": "^3.0.0"
   }
 }
